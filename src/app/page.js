@@ -3,9 +3,8 @@ import Hero from "@/ui/Hero";
 import Studio from "@/ui/Artstudio";
 import Introgami from "@/ui/Introgami";
 import Lividi from "@/ui/Lividi";
-import Cssplayground from "@/ui/Cssplayground";
+import Cssplayground from "@/app/ui/playground/Cssplayground";
 import Footer from "@/ui/Footer";
-
 export default function Home() {
   return (
     <div className="">
