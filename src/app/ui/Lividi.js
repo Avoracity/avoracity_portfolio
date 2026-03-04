@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function Lividi() {
     return (
-        <div></div>
-    );
+        <div className="bg-green-200 relative h-screen">
+            
+        </div>    );
 };

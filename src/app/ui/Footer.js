@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div></div>
-    );
+        <div className="relative h-[25vh]">
+            
+        </div>    );
 };

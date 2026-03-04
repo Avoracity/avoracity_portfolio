@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function Introgami() {
     return (
-        <div></div>
-    );
+        <div className="bg-pink-200 relative h-screen">
+            
+        </div>    );
 };
