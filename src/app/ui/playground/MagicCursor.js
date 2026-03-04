@@ -3,7 +3,13 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
-export default function MagicCursor() {
+export default function MagicCursor({
+  starDuration = 150,
+  minTime = 250,
+  minDistance = 75,
+  glowDuration = 75,
+  maxGlowSpacing = 10,
+}) {
   const containerRef = useRef(null);
   const cursorRef = useRef(null);
 
@@ -20,11 +26,11 @@ export default function MagicCursor() {
     };
 
     const config = {
-      starDuration: 1500,
-      minTime: 250,
-      minDistance: 75,
-      glowDuration: 75,
-      maxGlowSpacing: 10,
+      starDuration,
+      minTime,
+      minDistance,
+      glowDuration,
+      maxGlowSpacing,
     };
 
     const distance = (a, b) =>
@@ -37,10 +43,10 @@ export default function MagicCursor() {
 
       star.style.left = `${pos.x}px`;
       star.style.top = `${pos.y}px`;
-      star.style.animation = "fall 1.5s ease forwards";
+      star.style.animation = `fall ${config.starDuration * 10}ms ease forwards`;
 
       container.appendChild(star);
-      setTimeout(() => container.removeChild(star), 1500);
+      setTimeout(() => container.removeChild(star), config.starDuration);
     };
 
     const createGlow = (lastPos, current) => {
@@ -61,7 +67,7 @@ export default function MagicCursor() {
         glow.style.top = `${lastPos.y + dy * i}px`;
 
         container.appendChild(glow);
-        setTimeout(() => container.removeChild(glow), 75);
+        setTimeout(() => container.removeChild(glow), config.glowDuration);
       }
     };
 
@@ -89,7 +95,7 @@ export default function MagicCursor() {
 
     window.addEventListener("mousemove", handleMove);
     return () => window.removeEventListener("mousemove", handleMove);
-  }, []);
+  }, [starDuration, minTime, minDistance, glowDuration, maxGlowSpacing]);
 
   return (
     <>
