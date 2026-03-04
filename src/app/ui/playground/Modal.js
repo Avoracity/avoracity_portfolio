@@ -13,7 +13,7 @@ export default function Modal() {
 
    <div
   className="absolute inset-0 opacity-20
-  bg-['/public/star.svg']
+  bg-[url('/star.svg')]
   bg-size-[1%]
   bg-center
   animate-[pan_60s_linear_infinite]"
