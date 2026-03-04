@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function MagicCursor() {
   const containerRef = useRef(null);
@@ -101,10 +102,11 @@ export default function MagicCursor() {
         ref={cursorRef}
         className="fixed h-8 pointer-events-none z-100"
       >
-        <image
-          src="https://assets.codepen.io/1468070/Arrow+-+Cursor.png"
+        <Image
+          src="/arrowcursor.png"
           alt="cursor"
-          className="h-full w-full"
+          width={32}
+          height={32}
         />
       </div>
     </>
