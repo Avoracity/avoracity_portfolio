@@ -16,7 +16,7 @@ export default function CssPlayground() {
    const modalRef = useRef(null);
 
   return (
-    <div className="relative h-screen overflow-hidden bg-black cursor-none">
+    <div id="cssplayground" className="relative h-screen overflow-hidden bg-black cursor-none">
       <Background />
       <Modal ref={modalRef} />
 

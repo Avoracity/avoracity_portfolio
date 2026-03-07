@@ -157,7 +157,7 @@ export default function MagicCursor({
 
       <div
         ref={cursorRef}
-        className="fixed h-8 pointer-events-none z-[100] opacity-0 transition-opacity"
+        className="fixed h-8 pointer-events-none z-100 opacity-0 transition-opacity"
       >
         <Image
           src="/arrowcursor.png"
