@@ -150,3 +150,8 @@ if scroll={true} and hash link is used then clicking link will scroll to target 
 
 if scroll={false} and page route is used then nothing happens
 if scroll={true} and page route is used then link will scroll browser to the top of page
+
+
+## Dev Testing false error
+1) Delete package-lock.json and node_modules
+2) reinstall node packages 
