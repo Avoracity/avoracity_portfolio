@@ -1,6 +1,13 @@
-export default function Modal() {
+"use client";
+
+import { forwardRef } from "react";
+
+const Modal = forwardRef(function Modal(props, ref) {
   return (
-    <div className="absolute inset-0 flex items-center justify-center z-20 p-8">
+    <div
+      ref={ref}
+      className="absolute inset-0 flex items-center justify-center z-20 p-8"
+    >
       <div
         className="relative w-200 max-w-full aspect-5/3
         border-8 border-neutral-900
@@ -11,13 +18,13 @@ export default function Modal() {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-neutral-800" />
 
-   <div
-  className="absolute inset-0 opacity-20
-  bg-[url('/star.svg')]
-  bg-size-[1%]
-  bg-center
-  animate-[pan_60s_linear_infinite]"
-/>
+          <div
+            className="absolute inset-0 opacity-20
+            bg-[url('/star.svg')]
+            bg-size-[1%]
+            bg-center
+            animate-[pan_60s_linear_infinite]"
+          />
 
           <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent" />
         </div>
@@ -33,7 +40,7 @@ export default function Modal() {
           {["OK"].map((label) => (
             <button
               key={label}
-              className="w-64 p-3 text-xl rounded-xl  outline-4 outline-white outline-offset-4 bg-yellow-200 hover:bg-yellow-300 transition"
+              className="w-64 p-3 text-xl rounded-xl outline-4 outline-white outline-offset-4 bg-yellow-200 hover:bg-yellow-300 transition"
             >
               <span className="modal-action-text font-semibold text-black">
                 {label}
@@ -44,4 +51,8 @@ export default function Modal() {
       </div>
     </div>
   );
-}
+});
+
+Modal.displayName = "Modal";
+
+export default Modal;
