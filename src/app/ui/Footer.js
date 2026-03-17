@@ -4,5 +4,6 @@ export default function Footer() {
     return (
         <div className="bg-black relative h-[25vh]">
             
-        </div>    );
+        </div>
+           );
 };
