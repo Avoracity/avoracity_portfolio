@@ -5,6 +5,7 @@ export default function Navbar() {
         <div className="w-24 h-12 font-bold text-xl"></div>
 
         <ul className="flex gap-6">
+          <li><a href="#hero">Home</a></li>
           <li><a href="#studio">Studio</a></li>
           <li><a href="#introgami">Introgami</a></li>
           <li><a href="#lividi">Lividi</a></li>
