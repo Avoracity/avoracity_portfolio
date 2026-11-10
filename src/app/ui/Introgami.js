@@ -1,18 +1,16 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Introgami() {
     return (
-        <div className="bg-linear-to-b from-white to-[#2c307c]">
-            <div id="introgami" 
-            className="
-            bg-no-repeat bg-cover bg-[url('/introgami-section.png')] 
-            bg-pink-200 relative h-screen
-            mask-[linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)]
-            ">
-            
-            </div>   
+        <div id="introgami" className="relative w-full">
+            <Image
+                src="/introgamibg.png"
+                alt=""
+                width={1600}
+                height={900}
+                sizes="100vw"
+                className="block w-full h-auto"
+            />
         </div>
-
-
     );
-};
+}

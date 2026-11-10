@@ -7,10 +7,11 @@ export default function Navbar() {
         <ul className="flex gap-16">
           <li><a href="#studio">Studio</a></li>
           <li><a href="#introgami">Introgami</a></li>
+          <li><a href="#tmania">Tmania</a></li>
           <li><a href="#lividi">Lividi</a></li>
           <li><a href="#cssplayground">CSS Playground</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> 
   );
 }

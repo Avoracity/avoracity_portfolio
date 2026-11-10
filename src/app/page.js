@@ -4,6 +4,7 @@ import Hero from "@/ui/Hero";
 import Studio from "@/ui/Artstudio";
 import Introgami from "@/ui/Introgami";
 import Lividi from "@/ui/Lividi";
+import Tmania from "@/ui/Tmania";
 import Cssplayground from "@/app/ui/playground/Cssplayground";
 import Footer from "@/ui/Footer";
 import { useEffect } from "react";
@@ -23,6 +24,7 @@ export default function Home() {
       <main className="">
         <Navbar />
         <Hero />
+        <Tmania />
         <Studio />
         <Introgami />
         <Lividi />

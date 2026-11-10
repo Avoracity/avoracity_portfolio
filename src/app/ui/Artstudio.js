@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Artstudio() {
   return (
@@ -42,26 +43,27 @@ export default function Artstudio() {
 
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(16px); }
-          to   { opacity: 1; transform: translateY(0); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
 
-      <div className="bg-linear-to-b from-black to-[white]">
-        <div
-          id="studio"
-          className="
-            relative h-screen
-            bg-[url('/avoracity-studio-section.png')]
-            bg-cover bg-center bg-no-repeat
-            mask-[linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)]
-            flex items-end justify-center pb-20
-          "
+      <div id="studio" className="relative w-full">
+        <Image
+          src="/artportbg.png"
+          alt=""
+          width={1600}
+          height={900}
+          sizes="100vw"
+          className="block w-full h-auto"
+        />
+
+        <Link
+          href="/studio/commissions"
+          className="commissions-btn absolute bottom-20 left-1/2 -translate-x-1/2"
         >
-          <Link href="/studio/commissions" className="commissions-btn">
-            <span>View commissions</span>
-            <span className="btn-arrow">→</span>
-          </Link>
-        </div>
+          <span>View commissions</span>
+          <span className="btn-arrow">→</span>
+        </Link>
       </div>
     </>
   );
